@@ -1,5 +1,6 @@
 # Raspbian plus NodeJS Image for Raspberry Pi Development
-A disk image suitable for NodeJS development on Raspberry Pi
+**A disk image suitable for NodeJS development on Raspberry Pi.**
+Download Link: [https://dl.dropboxusercontent.com/u/1869833/pi-node.img.zip](https://dl.dropboxusercontent.com/u/1869833/pi-node.img.zip)
 
 ## Contains
 - Raspbian GNU/Linux 7
@@ -14,7 +15,7 @@ Tested on a Samsung Chromebook.
 
 > **Measure twice, cut once!** The following can destroy your filesystem. Ensure you are targeting the removable device you intend to before hitting that [Enter] key!
 
-1. Download and unzip the xxx.img file to a suitable directory
+1. Download and unzip [https://dl.dropboxusercontent.com/u/1869833/pi-node.img.zip](https://dl.dropboxusercontent.com/u/1869833/pi-node.img.zip) to a suitable directory. This file is about 1Gb compressed and will require approximately 4Gb as an uncompressed image. It is also stored in my public DropBox since it is far larger than Githubs maximum limit of 100Mb.
 1. Determine the name of your removable disk. Try using `dh -f` to list all partitions. On my Samsung Chromebook my SD card shows up as /dev/mmcblk1.
 1. Unmount all partitions using `sudo umount /dev/<device>pn` where n is each partition number. 
 1. Raw copy the image to the SD card with `sudo dd if=<path-to-image>/imagename of=/dev/<device>`. You are targeting the device and not any particular partition. It goes without saying that this command will destroy all data in all partitions on the device! The dd command does not provide any progress feedback and does take some time.
